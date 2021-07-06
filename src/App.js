@@ -1,7 +1,8 @@
 import {useState} from 'react'
 //import Accordion from './components/Accordion'
 // import Search from './components/Search'
-import Dropdown from './components/Dropdown'
+// import Dropdown from './components/Dropdown'
+import Translate from './components/Translate'
 
 // const items = [
 //   {
@@ -34,21 +35,22 @@ const options = [
 ]
 
 function App() {
-  const [selected, setSelected] = useState(options[0])
-  const [showDropdown, setShowDropdown] = useState(true)
+  // const [selected, setSelected] = useState(options[0])
+  // const [showDropdown, setShowDropdown] = useState(true)
 
   return (
     <div className="App">
       <h1>Widgets</h1>
-      <button onClick={()=> setShowDropdown(!showDropdown)}>Toggle DropDown</button>
+      {/* <button onClick={()=> setShowDropdown(!showDropdown)}>Toggle DropDown</button> */}
       {/* <Accordion items={items}/> */}
       {/* <Search /> */}
-      {
+      {/* {
         showDropdown ?
           <Dropdown options={options} selected={selected} onSelectedChange={setSelected} />
           : null
-      }
+      } */}
       
+      <Translate />
     </div>
   );
 }

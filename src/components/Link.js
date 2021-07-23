@@ -1,6 +1,10 @@
 
 const Link = ({ className, href, children }) => {
   const handleClick = (e) => {
+    if (e.metaKey || e.ctrlKey) {
+      return
+    }
+
     e.preventDefault()
     window.history.pushState({}, '', href)
 
